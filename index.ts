@@ -10,12 +10,10 @@ import { userRouter } from "./routes/user"
 // CORS configuration: allow the deployed frontend, allow auth headers, enable credentials, and handle preflight
 const corsOptions: cors.CorsOptions = {
     origin: [
-        "https://frontend-chat-app-on7h.vercel.app/",
+        "https://frontend-chat-app-on7h.vercel.app",
         "http://localhost:5173",
-        "http://localhost:3000",
-        "https://backend-chat-app-1-6hh7.onrender.com", // backend itself (for health checks)
-        "https://" + "".trim() // placeholder to keep array format
-    ].filter(Boolean),
+        "http://localhost:3000"
+    ],
     methods: ["GET","HEAD","PUT","PATCH","POST","DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
