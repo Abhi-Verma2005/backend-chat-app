@@ -36,13 +36,8 @@ userRouter.post("/signup", async (req: Request, res: Response): Promise<void> =>
         return;
     }
 
-    console.log(parsedDataWithSuccess)
 
     const { email, password, username } = parsedDataWithSuccess.data;
-    // const { email, password, roomName } = req.body;
-    console.log(email)
-    console.log(password)
-    console.log(username)
     const hashedPassword = await bcrypt.hash(password, 5);
 
     try{
@@ -54,7 +49,6 @@ userRouter.post("/signup", async (req: Request, res: Response): Promise<void> =>
             userpfp,
             rooms: []
         })
-        console.log("Signed Up")
         res.status(201).json({
             message: "User signed up!",
             nameOfUser: username,
