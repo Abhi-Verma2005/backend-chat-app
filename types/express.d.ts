@@ -1,4 +1,4 @@
-import "express";
+/// <reference types="express" />
 
 declare global {
   namespace Express {
@@ -7,3 +7,5 @@ declare global {
     }
   }
 }
+
+export {};

@@ -1,3 +1,4 @@
+/// <reference path="../types/express.d.ts" />
 import bcrypt from "bcrypt";
 import { z } from "zod";
 import jwt from "jsonwebtoken";
